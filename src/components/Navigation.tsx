@@ -37,7 +37,11 @@ export const Navigation = () => {
             <span className="hidden sm:block text-sm text-muted-foreground">
               📞 (555) 123-4567
             </span>
-            <Button variant="default" className="bg-gradient-accent shadow-accent">
+            <Button 
+              variant="default" 
+              className="bg-gradient-accent shadow-accent"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Get Quote
             </Button>
           </div>
