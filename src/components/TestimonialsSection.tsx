@@ -4,23 +4,23 @@ import { Star } from "lucide-react";
 const testimonials = [
   {
     name: "Michael Thompson",
-    location: "Belgrade, Serbia",
+    location: "Auckland, New Zealand",
     rating: 5,
     text: "Incredible attention to detail. My BMW looks better than when I bought it! The Balkan touch really shows in the quality of work.",
     vehicle: "BMW M3"
   },
   {
     name: "Sarah Chen",
-    location: "Novi Sad, Serbia",
+    location: "Wellington, New Zealand",
     rating: 5,
     text: "Professional service with a personal touch. The team treated my car like their own family vehicle. Highly recommend!",
     vehicle: "Audi A4"
   },
   {
     name: "David Rodriguez",
-    location: "Niš, Serbia",
+    location: "Christchurch, New Zealand",
     rating: 5,
-    text: "The craftsmanship is outstanding. You can see the heritage and pride in every detail. Worth every dinar!",
+    text: "The craftsmanship is outstanding. You can see the heritage and pride in every detail. Worth every dollar!",
     vehicle: "Mercedes C-Class"
   }
 ];
@@ -34,7 +34,7 @@ export const TestimonialsSection = () => {
             What Our Customers Say
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it - hear from satisfied customers across the Balkans.
+            Don't just take our word for it - hear from satisfied customers across New Zealand.
           </p>
         </div>
         

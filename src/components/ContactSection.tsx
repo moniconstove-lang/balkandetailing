@@ -45,7 +45,7 @@ export const ContactSection = () => {
               
               <div className="space-y-2">
                 <label className="text-sm font-medium text-foreground">Phone</label>
-                <Input placeholder="+381 XX XXX XXX" className="bg-background/50" />
+                <Input placeholder="021 266 3881" className="bg-background/50" />
               </div>
               
               <div className="space-y-2">
@@ -85,8 +85,8 @@ export const ContactSection = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Our Location</h3>
                     <p className="text-muted-foreground">
-                      Bulevar Kralja Aleksandra 123<br />
-                      11000 Belgrade, Serbia
+                      123 Queen Street<br />
+                      Auckland 1010, New Zealand
                     </p>
                   </div>
                 </div>
@@ -102,8 +102,8 @@ export const ContactSection = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Phone</h3>
                     <p className="text-muted-foreground">
-                      +381 11 123 4567<br />
-                      +381 64 123 4567 (Mobile)
+                      021 266 3881<br />
+                      021 266 3881 (Mobile)
                     </p>
                   </div>
                 </div>
@@ -119,8 +119,8 @@ export const ContactSection = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Email</h3>
                     <p className="text-muted-foreground">
-                      info@balkandetailing.rs<br />
-                      quote@balkandetailing.rs
+                      Balkandetailingco@gmail.com<br />
+                      Balkandetailingco@gmail.com
                     </p>
                   </div>
                 </div>
