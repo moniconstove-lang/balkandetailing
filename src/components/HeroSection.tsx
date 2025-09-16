@@ -18,7 +18,7 @@ export const HeroSection = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6 py-20">
         <div className="space-y-8">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-playfair text-foreground leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-inter text-foreground leading-tight">
               Precision Car Detailing
               <span className="block text-primary"> with a Balkan Touch</span>
             </h1>
