@@ -63,7 +63,7 @@ export const ServicesSection = () => {
     <section id="services" className="py-24 bg-gradient-hero">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold font-inter text-foreground mb-6">
             Our Premium Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -90,7 +90,7 @@ export const ServicesSection = () => {
                 <div className="w-16 h-16 bg-gradient-accent rounded-xl flex items-center justify-center mx-auto mb-4 shadow-accent">
                   <service.icon className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <CardTitle className="text-xl font-playfair text-foreground">
+                <CardTitle className="text-xl font-inter text-foreground">
                   {service.title}
                 </CardTitle>
                 <CardDescription className="text-muted-foreground">
@@ -110,7 +110,7 @@ export const ServicesSection = () => {
                 
                 <div className="pt-4 border-t border-border/20">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-primary font-playfair">
+                    <span className="text-2xl font-bold text-primary font-inter">
                       {service.price}
                     </span>
                   </div>
@@ -128,14 +128,14 @@ export const ServicesSection = () => {
         <div className="text-center mt-12">
           <Card className="max-w-2xl mx-auto bg-card/30 backdrop-blur-sm border-border/20">
             <CardContent className="p-8">
-              <h3 className="text-2xl font-bold font-playfair text-foreground mb-4">
+              <h3 className="text-2xl font-bold font-inter text-foreground mb-4">
                 Complete Detailing Package
               </h3>
               <p className="text-muted-foreground mb-6">
                 All Interior + Exterior Services Combined with exclusive Balkan touch
               </p>
               <div className="flex items-center justify-center space-x-4">
-                <span className="text-3xl font-bold text-primary font-playfair">From $399</span>
+                <span className="text-3xl font-bold text-primary font-inter">From $399</span>
                 <Button size="lg" className="bg-gradient-accent shadow-accent">
                   Get Complete Package
                 </Button>

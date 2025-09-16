@@ -9,7 +9,7 @@ export const ContactSection = () => {
     <section id="contact" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold font-inter text-foreground mb-6">
             Get Your Quote Today
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -22,7 +22,7 @@ export const ContactSection = () => {
           {/* Contact Form */}
           <Card className="bg-card/50 backdrop-blur-sm border-border/20 shadow-card">
             <CardHeader>
-              <CardTitle className="text-2xl font-playfair text-foreground">
+              <CardTitle className="text-2xl font-inter text-foreground">
                 Request a Quote
               </CardTitle>
             </CardHeader>

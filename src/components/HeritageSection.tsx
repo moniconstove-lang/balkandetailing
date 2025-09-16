@@ -23,7 +23,7 @@ export const HeritageSection = () => {
             <div className="absolute -bottom-6 -right-6">
               <Card className="bg-gradient-accent shadow-accent border-0">
                 <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-primary-foreground font-playfair">BC</div>
+                  <div className="text-3xl font-bold text-primary-foreground font-inter">BC</div>
                   <div className="text-sm text-primary-foreground/80">Since 1987</div>
                 </CardContent>
               </Card>
@@ -36,7 +36,7 @@ export const HeritageSection = () => {
               <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
                 Our Heritage
               </Badge>
-              <h2 className="text-4xl md:text-5xl font-bold font-playfair text-foreground">
+              <h2 className="text-4xl md:text-5xl font-bold font-inter text-foreground">
                 Family Heritage Meets Modern Excellence
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
@@ -48,28 +48,28 @@ export const HeritageSection = () => {
             <div className="grid sm:grid-cols-3 gap-6">
               <Card className="bg-card/50 backdrop-blur-sm border-border/20 text-center">
                 <CardContent className="p-6">
-                  <div className="text-2xl font-bold text-primary font-playfair mb-2">35+</div>
+                  <div className="text-2xl font-bold text-primary font-inter mb-2">35+</div>
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </CardContent>
               </Card>
               
               <Card className="bg-card/50 backdrop-blur-sm border-border/20 text-center">
                 <CardContent className="p-6">
-                  <div className="text-2xl font-bold text-primary font-playfair mb-2">10k+</div>
+                  <div className="text-2xl font-bold text-primary font-inter mb-2">10k+</div>
                   <div className="text-sm text-muted-foreground">Cars Detailed</div>
                 </CardContent>
               </Card>
               
               <Card className="bg-card/50 backdrop-blur-sm border-border/20 text-center">
                 <CardContent className="p-6">
-                  <div className="text-2xl font-bold text-primary font-playfair mb-2">100%</div>
+                  <div className="text-2xl font-bold text-primary font-inter mb-2">100%</div>
                   <div className="text-sm text-muted-foreground">Satisfaction</div>
                 </CardContent>
               </Card>
             </div>
             
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold font-playfair text-foreground">
+              <h3 className="text-2xl font-bold font-inter text-foreground">
                 Why Choose Balkan Detailing Co.?
               </h3>
               

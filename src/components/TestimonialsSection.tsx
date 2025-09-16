@@ -30,7 +30,7 @@ export const TestimonialsSection = () => {
     <section id="testimonials" className="py-24 bg-gradient-hero">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-playfair text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold font-inter text-foreground mb-6">
             What Our Customers Say
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -80,19 +80,19 @@ export const TestimonialsSection = () => {
             <CardContent className="p-8">
               <div className="grid sm:grid-cols-4 gap-8 items-center">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary font-playfair mb-2">4.9/5</div>
+                  <div className="text-3xl font-bold text-primary font-inter mb-2">4.9/5</div>
                   <div className="text-sm text-muted-foreground">Average Rating</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary font-playfair mb-2">500+</div>
+                  <div className="text-3xl font-bold text-primary font-inter mb-2">500+</div>
                   <div className="text-sm text-muted-foreground">Google Reviews</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary font-playfair mb-2">98%</div>
+                  <div className="text-3xl font-bold text-primary font-inter mb-2">98%</div>
                   <div className="text-sm text-muted-foreground">Return Customers</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary font-playfair mb-2">10k+</div>
+                  <div className="text-3xl font-bold text-primary font-inter mb-2">10k+</div>
                   <div className="text-sm text-muted-foreground">Cars Detailed</div>
                 </div>
               </div>
