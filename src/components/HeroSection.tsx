@@ -38,6 +38,7 @@ export const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-gradient-accent shadow-accent hover:shadow-luxury transition-all duration-300 text-lg px-8 py-4"
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
             >
               View Our Services →
             </Button>
@@ -45,6 +46,7 @@ export const HeroSection = () => {
               variant="outline" 
               size="lg"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-4 transition-all duration-300"
+              onClick={() => document.getElementById('heritage')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Watch Our Work
             </Button>
