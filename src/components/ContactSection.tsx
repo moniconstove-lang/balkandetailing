@@ -56,10 +56,11 @@ export const ContactSection = () => {
           serviceNeeded: ''
         });
       }
-    } catch (error) {
+    } catch (err: any) {
+      console.error('Quote form submission error:', err);
       toast({
-        title: "Error",
-        description: "Failed to send quote request. Please try again.",
+        title: "Error sending quote",
+        description: err?.message || "Failed to send quote request. Please try again.",
         variant: "destructive",
       });
     } finally {

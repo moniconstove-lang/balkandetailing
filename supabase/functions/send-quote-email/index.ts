@@ -43,32 +43,40 @@ This email was sent automatically from the Balkan Detailing website contact form
       serviceNeeded
     })
 
-    // Send email using Resend
-    const emailResponse = await resend.emails.send({
-      from: 'Balkan Detailing <onboarding@resend.dev>',
-      to: 'balkandetailingco@gmail.com',
-      subject: `New Quote Request from ${firstName} ${lastName}`,
-      html: `
-        <h2>New Quote Request from Balkan Detailing Website</h2>
-        
-        <h3>Customer Details:</h3>
-        <ul>
-          <li><strong>Name:</strong> ${firstName} ${lastName}</li>
-          <li><strong>Email:</strong> ${email}</li>
-          <li><strong>Phone:</strong> ${phone}</li>
-          <li><strong>Vehicle:</strong> ${vehicleDetails}</li>
-        </ul>
-        
-        <h3>Service Requested:</h3>
-        <p>${serviceNeeded}</p>
-        
-        <hr>
-        <p><em>This email was sent automatically from the Balkan Detailing website contact form.</em></p>
-      `,
-    })
+    // Send email using Resend with detailed logging
+    let emailResponse: any;
+    try {
+      emailResponse = await resend.emails.send({
+        from: 'Balkan Detailing <onboarding@resend.dev>',
+        to: ['balkandetailingco@gmail.com'],
+        subject: `New Quote Request from ${firstName} ${lastName}`,
+        html: `
+          <h2>New Quote Request from Balkan Detailing Website</h2>
+          
+          <h3>Customer Details:</h3>
+          <ul>
+            <li><strong>Name:</strong> ${firstName} ${lastName}</li>
+            <li><strong>Email:</strong> ${email}</li>
+            <li><strong>Phone:</strong> ${phone}</li>
+            <li><strong>Vehicle:</strong> ${vehicleDetails}</li>
+          </ul>
+          
+          <h3>Service Requested:</h3>
+          <p>${serviceNeeded}</p>
+          
+          <hr>
+          <p><em>This email was sent automatically from the Balkan Detailing website contact form.</em></p>
+        `,
+      });
+      console.log('Resend emailResponse:', emailResponse);
+    } catch (sendErr: any) {
+      console.error('Resend send failed:', sendErr);
+      throw new Error(`Resend send failed: ${sendErr?.message || sendErr}`);
+    }
 
-    if (emailResponse.error) {
-      throw new Error(`Failed to send email: ${emailResponse.error.message}`)
+    if (emailResponse?.error) {
+      console.error('Resend returned error:', emailResponse.error);
+      throw new Error(`Failed to send email: ${emailResponse.error.message}`);
     }
 
     return new Response(
