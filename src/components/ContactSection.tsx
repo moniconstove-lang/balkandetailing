@@ -2,9 +2,74 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/components/ui/use-toast";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useState } from "react";
 
 export const ContactSection = () => {
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    vehicleDetails: '',
+    serviceNeeded: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/send-quote-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Quote Request Sent!",
+          description: "We'll get back to you within 2 hours during business hours.",
+        });
+        
+        // Reset form
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          vehicleDetails: '',
+          serviceNeeded: ''
+        });
+      } else {
+        throw new Error(result.message);
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send quote request. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-background">
       <div className="container mx-auto px-6">
@@ -27,46 +92,90 @@ export const ContactSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">First Name</label>
-                  <Input placeholder="Marko" className="bg-background/50" />
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">First Name</label>
+                    <Input 
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleInputChange}
+                      placeholder="Marko" 
+                      className="bg-background/50"
+                      required
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground">Last Name</label>
+                    <Input 
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleInputChange}
+                      placeholder="Petrović" 
+                      className="bg-background/50"
+                      required
+                    />
+                  </div>
                 </div>
+                
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Last Name</label>
-                  <Input placeholder="Petrović" className="bg-background/50" />
+                  <label className="text-sm font-medium text-foreground">Email</label>
+                  <Input 
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    placeholder="marko@email.com" 
+                    type="email" 
+                    className="bg-background/50"
+                    required
+                  />
                 </div>
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Email</label>
-                <Input placeholder="marko@email.com" type="email" className="bg-background/50" />
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Phone</label>
-                <Input placeholder="021 266 3881" className="bg-background/50" />
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Vehicle Details</label>
-                <Input placeholder="e.g., 2020 BMW X5" className="bg-background/50" />
-              </div>
-              
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-foreground">Service Needed</label>
-                <Textarea 
-                  placeholder="Describe the services you're interested in..."
-                  className="bg-background/50 min-h-[100px]"
-                />
-              </div>
-              
-              <Button 
-                size="lg" 
-                className="w-full bg-gradient-accent shadow-accent hover:shadow-luxury transition-all duration-300"
-              >
-                Get My Quote →
-              </Button>
+                
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">Phone</label>
+                  <Input 
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="021 266 3881" 
+                    className="bg-background/50"
+                    required
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">Vehicle Details</label>
+                  <Input 
+                    name="vehicleDetails"
+                    value={formData.vehicleDetails}
+                    onChange={handleInputChange}
+                    placeholder="e.g., 2020 BMW X5" 
+                    className="bg-background/50"
+                    required
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">Service Needed</label>
+                  <Textarea 
+                    name="serviceNeeded"
+                    value={formData.serviceNeeded}
+                    onChange={handleInputChange}
+                    placeholder="Describe the services you're interested in..."
+                    className="bg-background/50 min-h-[100px]"
+                    required
+                  />
+                </div>
+                
+                <Button 
+                  type="submit"
+                  size="lg" 
+                  className="w-full bg-gradient-accent shadow-accent hover:shadow-luxury transition-all duration-300"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Sending..." : "Get My Quote →"}
+                </Button>
+              </form>
               
               <p className="text-sm text-muted-foreground text-center">
                 We typically respond within 2 hours during business hours
