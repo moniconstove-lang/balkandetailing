@@ -16,26 +16,41 @@ export const Navigation = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-colors font-medium">
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
               Home
-            </a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">
+            </button>
+            <button 
+              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
               Services
-            </a>
-            <a href="#heritage" className="text-foreground hover:text-primary transition-colors font-medium">
+            </button>
+            <button 
+              onClick={() => document.getElementById('heritage')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
               Heritage
-            </a>
-            <a href="#testimonials" className="text-foreground hover:text-primary transition-colors font-medium">
+            </button>
+            <button 
+              onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
               Testimonials
-            </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">
+            </button>
+            <button 
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="text-foreground hover:text-primary transition-colors font-medium"
+            >
               Contact
-            </a>
+            </button>
           </div>
 
           <div className="flex items-center space-x-4">
             <span className="hidden sm:block text-sm text-muted-foreground">
-              📞 (555) 123-4567
+              📞 021 266 3881
             </span>
             <Button 
               variant="default" 
