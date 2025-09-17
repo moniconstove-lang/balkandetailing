@@ -1,4 +1,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
+import { Resend } from "npm:resend@2.0.0"
+
+const resend = new Resend(Deno.env.get("RESEND_API_KEY"))
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -31,8 +34,6 @@ ${serviceNeeded}
 This email was sent automatically from the Balkan Detailing website contact form.
     `
 
-    // For now, we'll use a simple email service
-    // You can integrate with services like Resend, SendGrid, or Mailgun
     console.log('Quote request received:', {
       firstName,
       lastName,
@@ -42,21 +43,33 @@ This email was sent automatically from the Balkan Detailing website contact form
       serviceNeeded
     })
 
-    // TODO: Integrate with actual email service
-    // Example with Resend:
-    // const res = await fetch('https://api.resend.com/emails', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //     'Authorization': `Bearer ${Deno.env.get('RESEND_API_KEY')}`,
-    //   },
-    //   body: JSON.stringify({
-    //     from: 'noreply@balkandetailing.com',
-    //     to: 'balkandetailingco@gmail.com',
-    //     subject: `New Quote Request from ${firstName} ${lastName}`,
-    //     text: emailContent,
-    //   }),
-    // })
+    // Send email using Resend
+    const emailResponse = await resend.emails.send({
+      from: 'Balkan Detailing <onboarding@resend.dev>',
+      to: 'balkandetailingco@gmail.com',
+      subject: `New Quote Request from ${firstName} ${lastName}`,
+      html: `
+        <h2>New Quote Request from Balkan Detailing Website</h2>
+        
+        <h3>Customer Details:</h3>
+        <ul>
+          <li><strong>Name:</strong> ${firstName} ${lastName}</li>
+          <li><strong>Email:</strong> ${email}</li>
+          <li><strong>Phone:</strong> ${phone}</li>
+          <li><strong>Vehicle:</strong> ${vehicleDetails}</li>
+        </ul>
+        
+        <h3>Service Requested:</h3>
+        <p>${serviceNeeded}</p>
+        
+        <hr>
+        <p><em>This email was sent automatically from the Balkan Detailing website contact form.</em></p>
+      `,
+    })
+
+    if (emailResponse.error) {
+      throw new Error(`Failed to send email: ${emailResponse.error.message}`)
+    }
 
     return new Response(
       JSON.stringify({ 

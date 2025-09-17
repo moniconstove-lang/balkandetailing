@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
 
 export const ContactSection = () => {
   const { toast } = useToast();
@@ -31,17 +32,15 @@ export const ContactSection = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('/api/send-quote-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+      const { data, error } = await supabase.functions.invoke('send-quote-email', {
+        body: formData,
       });
 
-      const result = await response.json();
+      if (error) {
+        throw new Error(error.message || 'Failed to send quote request');
+      }
 
-      if (result.success) {
+      if (data) {
         toast({
           title: "Quote Request Sent!",
           description: "We'll get back to you within 2 hours during business hours.",
@@ -56,8 +55,6 @@ export const ContactSection = () => {
           vehicleDetails: '',
           serviceNeeded: ''
         });
-      } else {
-        throw new Error(result.message);
       }
     } catch (error) {
       toast({
