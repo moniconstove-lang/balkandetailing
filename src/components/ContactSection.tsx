@@ -208,8 +208,7 @@ export const ContactSection = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Phone</h3>
                     <p className="text-muted-foreground">
-                      021 266 3881<br />
-                      021 266 3881 (Mobile)
+                      021 266 3881
                     </p>
                   </div>
                 </div>
