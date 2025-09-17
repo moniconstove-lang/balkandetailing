@@ -192,8 +192,7 @@ export const ContactSection = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Our Location</h3>
                     <p className="text-muted-foreground">
-                      123 Queen Street<br />
-                      Auckland 1010, New Zealand
+                      Auckland, New Zealand
                     </p>
                   </div>
                 </div>
