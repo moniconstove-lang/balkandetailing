@@ -10,7 +10,7 @@ export const Navigation = () => {
               <span className="text-lg font-bold text-primary-foreground font-playfair">B</span>
             </div>
             <div>
-              <h1 className="text-lg font-bold font-playfair text-foreground">Balkan Detailing Co.</h1>
+              <h1 className="text-lg font-bold text-foreground">Balkan Detailing Co.</h1>
               <p className="text-xs text-muted-foreground">Precision • Heritage • Excellence</p>
             </div>
           </div>
