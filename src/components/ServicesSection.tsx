@@ -31,30 +31,17 @@ const services = [
     popular: false
   },
   {
-    icon: Paintbrush,
-    title: "Paint Correction",
-    description: "Professional swirl and scratch removal with precision techniques",
+    icon: Sparkles,
+    title: "Complete Detailing Package",
+    description: "All Interior + Exterior Services Combined with exclusive Balkan touch",
     features: [
-      "Multi-step paint correction",
-      "Swirl & scratch removal",
-      "Paint enhancement & clarity",
-      "Professional polishing compounds"
+      "Full exterior & interior detailing",
+      "Paint correction & protection",
+      "Premium ceramic coating",
+      "Exclusive Balkan craftsmanship"
     ],
-    price: "From $299",
+    price: "From $399",
     popular: true
-  },
-  {
-    icon: Shield,
-    title: "Ceramic Coating",
-    description: "Long-lasting protection with incredible shine and durability",
-    features: [
-      "9H hardness ceramic protection",
-      "Hydrophobic properties",
-      "UV protection & gloss enhancement",
-      "5-year warranty included"
-    ],
-    price: "From $599",
-    popular: false
   }
 ];
 
@@ -123,25 +110,6 @@ export const ServicesSection = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <Card className="max-w-2xl mx-auto bg-card/30 backdrop-blur-sm border-border/20">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold font-inter text-foreground mb-4">
-                Complete Detailing Package
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                All Interior + Exterior Services Combined with exclusive Balkan touch
-              </p>
-              <div className="flex items-center justify-center space-x-4">
-                <span className="text-3xl font-bold text-primary font-inter">From $399</span>
-                <Button size="lg" className="bg-gradient-accent shadow-accent">
-                  Get Complete Package
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
