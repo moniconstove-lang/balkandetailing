@@ -48,7 +48,7 @@ export const HeroSection = () => {
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-4 transition-all duration-300"
               onClick={() => document.getElementById('heritage')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Watch Our Work
+              About Us
             </Button>
           </div>
           
