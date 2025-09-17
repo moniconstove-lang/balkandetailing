@@ -59,7 +59,7 @@ export const ServicesSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {services.map((service, index) => (
             <Card 
               key={index} 
@@ -103,6 +103,19 @@ export const ServicesSection = () => {
                   </div>
                   <Button 
                     className="w-full bg-gradient-accent shadow-accent hover:shadow-luxury transition-all duration-300"
+                    onClick={() => {
+                      const contactSection = document.getElementById('contact');
+                      const serviceTextarea = document.querySelector('textarea[placeholder*="Describe the services"]') as HTMLTextAreaElement;
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: 'smooth' });
+                        if (serviceTextarea) {
+                          setTimeout(() => {
+                            serviceTextarea.value = `I'm interested in the ${service.title} package - ${service.description}`;
+                            serviceTextarea.focus();
+                          }, 500);
+                        }
+                      }
+                    }}
                   >
                     Book Now
                   </Button>
