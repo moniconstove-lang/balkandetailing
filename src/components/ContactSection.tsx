@@ -224,7 +224,6 @@ export const ContactSection = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-2">Email</h3>
                     <p className="text-muted-foreground">
-                      Balkandetailingco@gmail.com<br />
                       Balkandetailingco@gmail.com
                     </p>
                   </div>
