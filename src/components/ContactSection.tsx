@@ -98,7 +98,7 @@ export const ContactSection = () => {
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleInputChange}
-                      placeholder="Marko" 
+                      placeholder="Mark" 
                       className="bg-background/50"
                       required
                     />
@@ -109,7 +109,7 @@ export const ContactSection = () => {
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleInputChange}
-                      placeholder="Petrović" 
+                      placeholder="Smith" 
                       className="bg-background/50"
                       required
                     />
@@ -122,7 +122,7 @@ export const ContactSection = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    placeholder="marko@email.com" 
+                    placeholder="mark@email.com" 
                     type="email" 
                     className="bg-background/50"
                     required
