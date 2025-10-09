@@ -1,33 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
-
-const testimonials = [
-  {
-    name: "Michael Thompson",
-    location: "Auckland, New Zealand",
-    rating: 5,
-    text: "Incredible attention to detail. My BMW looks better than when I bought it! The Balkan touch really shows in the quality of work.",
-    vehicle: "BMW M3"
-  },
-  {
-    name: "Sarah Chen",
-    location: "Wellington, New Zealand",
-    rating: 5,
-    text: "Professional service with a personal touch. The team treated my car like their own family vehicle. Highly recommend!",
-    vehicle: "Audi A4"
-  },
-  {
-    name: "David Rodriguez",
-    location: "Christchurch, New Zealand",
-    rating: 5,
-    text: "The craftsmanship is outstanding. You can see the heritage and pride in every detail. Worth every dollar!",
-    vehicle: "Mercedes C-Class"
-  }
-];
-
+const testimonials = [{
+  name: "Michael Thompson",
+  location: "Auckland, New Zealand",
+  rating: 5,
+  text: "Incredible attention to detail. My BMW looks better than when I bought it! The Balkan touch really shows in the quality of work.",
+  vehicle: "BMW M3"
+}, {
+  name: "Sarah Chen",
+  location: "Wellington, New Zealand",
+  rating: 5,
+  text: "Professional service with a personal touch. The team treated my car like their own family vehicle. Highly recommend!",
+  vehicle: "Audi A4"
+}, {
+  name: "David Rodriguez",
+  location: "Christchurch, New Zealand",
+  rating: 5,
+  text: "The craftsmanship is outstanding. You can see the heritage and pride in every detail. Worth every dollar!",
+  vehicle: "Mercedes C-Class"
+}];
 export const TestimonialsSection = () => {
-  return (
-    <section id="testimonials" className="py-24 bg-gradient-hero">
+  return <section id="testimonials" className="bg-gradient-hero py-[66px]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-inter text-foreground mb-6">
@@ -39,17 +32,11 @@ export const TestimonialsSection = () => {
         </div>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <Card 
-              key={index}
-              className="bg-card/50 backdrop-blur-sm border-border/20 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-2"
-            >
+          {testimonials.map((testimonial, index) => <Card key={index} className="bg-card/50 backdrop-blur-sm border-border/20 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-2">
               <CardContent className="p-8">
                 {/* Rating Stars */}
                 <div className="flex items-center space-x-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-                  ))}
+                  {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-5 h-5 fill-primary text-primary" />)}
                 </div>
                 
                 {/* Testimonial Text */}
@@ -70,8 +57,7 @@ export const TestimonialsSection = () => {
                   </div>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
         
         {/* Trust Indicators */}
@@ -100,6 +86,5 @@ export const TestimonialsSection = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
