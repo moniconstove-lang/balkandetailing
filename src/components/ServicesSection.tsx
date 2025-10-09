@@ -109,7 +109,7 @@ export const ServicesSection = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className={`relative bg-card/50 backdrop-blur-sm border-border/20 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 ${
+              className={`relative bg-card/50 backdrop-blur-sm border-border/20 shadow-card hover:shadow-luxury transition-all duration-300 hover:-translate-y-2 flex flex-col ${
                 service.popular ? 'ring-2 ring-primary' : ''
               }`}
             >
@@ -131,7 +131,7 @@ export const ServicesSection = () => {
                 </CardDescription>
               </CardHeader>
               
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4 flex flex-col flex-grow">
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start text-sm text-muted-foreground">
@@ -141,7 +141,7 @@ export const ServicesSection = () => {
                   ))}
                 </ul>
                 
-                <div className="pt-4 border-t border-border/20">
+                <div className="pt-4 border-t border-border/20 mt-auto">
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-2xl font-bold text-primary font-inter">
                       {service.price}
