@@ -37,7 +37,6 @@ export const Footer = () => {
             <h4 className="font-semibold text-foreground">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>📍 Auckland Central Area</li>
-              
               <li>📞 021 266 3881</li>
               <li>📧 Balkandetailingco@gmail.com</li>
             </ul>
