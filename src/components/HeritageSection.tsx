@@ -2,20 +2,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import interiorImage from "@/assets/interior-detail.jpg";
-
 export const HeritageSection = () => {
-  return (
-    <section id="heritage" className="py-24 bg-background">
+  return <section id="heritage" className="bg-background py-[66px]">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image Side */}
           <div className="relative">
             <div className="relative overflow-hidden rounded-2xl shadow-luxury">
-              <img 
-                src={interiorImage} 
-                alt="Luxury car interior detailing"
-                className="w-full h-[600px] object-cover"
-              />
+              <img src={interiorImage} alt="Luxury car interior detailing" className="w-full h-[600px] object-cover" />
               <div className="absolute inset-0 bg-gradient-overlay opacity-20"></div>
             </div>
             
@@ -83,16 +77,10 @@ export const HeritageSection = () => {
                 </div>
               </div>
               
-              <Button 
-                size="lg" 
-                className="bg-gradient-accent shadow-accent hover:shadow-luxury transition-all duration-300"
-              >
-                Learn Our Story →
-              </Button>
+              
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
