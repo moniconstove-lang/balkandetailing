@@ -16,7 +16,7 @@ const services = [
       "Claybar treatment & iron decontamination",
       "Machine waxing & paint protection"
     ],
-    price: "From $149",
+    price: "From $120",
     popular: false,
     detailedDescription: "Our exterior detailing service combines traditional Balkan craftsmanship with modern techniques to restore your vehicle's pristine appearance. We begin with a thorough inspection, followed by a multi-stage cleaning process that includes specialized treatments for different surfaces.",
     process: [
@@ -43,7 +43,7 @@ const services = [
       "Dashboard & trim restoration",
       "Odor elimination treatment"
     ],
-    price: "From $129",
+    price: "From $150",
     popular: false,
     detailedDescription: "Transform your vehicle's interior with our comprehensive deep cleaning service. Using eco-friendly products and time-tested Balkan techniques, we restore every surface to like-new condition while preserving the integrity of original materials.",
     process: [
@@ -70,7 +70,7 @@ const services = [
       "Premium ceramic coating",
       "Exclusive Balkan craftsmanship"
     ],
-    price: "From $399",
+    price: "From $250",
     popular: true,
     detailedDescription: "Our flagship service combines generations of Balkan craftsmanship with cutting-edge detailing technology. This comprehensive package includes everything from our exterior and interior services, plus exclusive treatments that set your vehicle apart.",
     process: [
