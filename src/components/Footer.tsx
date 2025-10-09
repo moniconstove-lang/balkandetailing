@@ -1,8 +1,6 @@
 import { Card } from "@/components/ui/card";
-
 export const Footer = () => {
-  return (
-    <footer className="bg-gradient-hero border-t border-border/20 py-12">
+  return <footer className="bg-gradient-hero border-t border-border/20 py-12">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
@@ -39,7 +37,7 @@ export const Footer = () => {
             <h4 className="font-semibold text-foreground">Contact</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>📍 Auckland Central Area</li>
-              <li>New Zealand</li>
+              
               <li>📞 021 266 3881</li>
               <li>📧 Balkandetailingco@gmail.com</li>
             </ul>
@@ -81,6 +79,5 @@ export const Footer = () => {
           </div>
         </Card>
       </div>
-    </footer>
-  );
+    </footer>;
 };
