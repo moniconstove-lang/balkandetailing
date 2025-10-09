@@ -45,28 +45,6 @@ export const HeritageSection = () => {
               </p>
             </div>
             
-            <div className="grid sm:grid-cols-3 gap-6">
-              <Card className="bg-card/50 backdrop-blur-sm border-border/20 text-center">
-                <CardContent className="p-6">
-                  <div className="text-2xl font-bold text-primary font-inter mb-2">35+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-card/50 backdrop-blur-sm border-border/20 text-center">
-                <CardContent className="p-6">
-                  <div className="text-2xl font-bold text-primary font-inter mb-2">10k+</div>
-                  <div className="text-sm text-muted-foreground">Cars Detailed</div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-card/50 backdrop-blur-sm border-border/20 text-center">
-                <CardContent className="p-6">
-                  <div className="text-2xl font-bold text-primary font-inter mb-2">100%</div>
-                  <div className="text-sm text-muted-foreground">Satisfaction</div>
-                </CardContent>
-              </Card>
-            </div>
             
             <div className="space-y-6">
               <h3 className="text-2xl font-bold font-inter text-foreground">
