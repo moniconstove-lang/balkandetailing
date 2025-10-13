@@ -1,15 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-car.jpg";
-
 export const HeroSection = () => {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `url(${heroImage})`
+    }} />
       
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-overlay" />
@@ -28,26 +25,21 @@ export const HeroSection = () => {
           </div>
           
           {/* Social Proof */}
-          <div className="bg-primary/10 backdrop-blur-sm rounded-lg p-3 max-w-sm mx-auto border-2 border-primary/30">
-            <p className="text-sm font-semibold text-primary mb-1">🎉 First-Time Offer: $199 (Save 20%!)</p>
-            <p className="text-xs text-foreground">✨ Complete Interior & Exterior Detail</p>
+          <div className="bg-card/20 backdrop-blur-sm rounded-lg p-4 max-w-sm mx-auto border border-border/20">
+            <p className="text-sm text-muted-foreground mb-2">🎉 First-Time Offer: $199 (Save 20%)</p>
+            <p className="text-primary font-semibold">10,000+ satisfied customers</p>
           </div>
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              className="bg-gradient-accent shadow-accent hover:shadow-luxury transition-all duration-300 text-lg px-8 py-4"
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+            <Button size="lg" className="bg-gradient-accent shadow-accent hover:shadow-luxury transition-all duration-300 text-lg px-8 py-4" onClick={() => document.getElementById('services')?.scrollIntoView({
+            behavior: 'smooth'
+          })}>
               View Our Services →
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-4 transition-all duration-300"
-              onClick={() => document.getElementById('heritage')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+            <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-4 transition-all duration-300" onClick={() => document.getElementById('heritage')?.scrollIntoView({
+            behavior: 'smooth'
+          })}>
               About Us
             </Button>
           </div>
@@ -58,6 +50,5 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
