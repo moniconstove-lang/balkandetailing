@@ -30,7 +30,7 @@ export const HeroSection = () => {
           {/* Social Proof */}
           <div className="bg-card/20 backdrop-blur-sm rounded-lg p-4 max-w-sm mx-auto border border-border/20">
             <p className="text-sm text-muted-foreground mb-2">First-Time Detailing Offer, normally $250, now just $199.</p>
-            <p className="text-primary font-semibold">10,000+ satisfied customers</p>
+            <p className="text-primary font-semibold">Treat your car to full interior & exterior detailing!</p>
           </div>
           
           {/* CTA Buttons */}
