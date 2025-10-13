@@ -16,9 +16,8 @@ export const HeritageSection = () => {
             {/* Floating Badge */}
             <div className="absolute -bottom-6 -right-6">
               <Card className="bg-gradient-accent shadow-accent border-0">
-                <CardContent className="p-6 text-center">
-                  <div className="text-3xl font-bold text-primary-foreground font-inter">BC</div>
-                  <div className="text-sm text-primary-foreground/80">Since 1987</div>
+                <CardContent className="p-6 flex items-center justify-center">
+                  <div className="text-4xl font-bold text-primary-foreground font-playfair">B</div>
                 </CardContent>
               </Card>
             </div>
