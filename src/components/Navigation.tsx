@@ -34,13 +34,7 @@ export const Navigation = () => {
             >
               Heritage
             </button>
-            <button 
-              onClick={() => document.getElementById('testimonials')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-foreground hover:text-primary transition-colors font-medium"
-            >
-              Testimonials
-            </button>
-            <button 
+            <button
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               className="text-foreground hover:text-primary transition-colors font-medium"
             >
