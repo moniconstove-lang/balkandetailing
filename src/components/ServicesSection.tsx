@@ -23,7 +23,7 @@ const services = [{
   price: "From $150",
   popular: false,
   detailedDescription: "Transform your vehicle's interior with our comprehensive deep cleaning service. Using eco-friendly products and time-tested Balkan techniques, we restore every surface to like-new condition while preserving the integrity of original materials.",
-  process: ["Complete removal of personal items and floor mats", "Thorough vacuuming of all surfaces including crevices", "Steam cleaning of fabric upholstery and carpets", "Leather cleaning and conditioning with premium products", "Dashboard and trim restoration using specialized cleaners", "Air vent cleaning and sanitization", "Window cleaning for crystal-clear visibility", "Odor elimination treatment with ozone technology", "Final protective conditioning and UV protection application"],
+  process: ["Prepare Interior & Remove Floor Mats", "Detail Door Jambs & Hinges", "Spot-Clean Headliner & Overhead Areas", "Dust & Detail Interior Surfaces", "Comprehensive Vacuum of All Areas", "Clean, Dress & Protect Plastic Trim", "Deep Clean & Condition Seats & Steering Wheel", "Detail Pedals & Lower Footwell", "Shampoo & Extract Carpets", "Polish Windows & Apply Final Touches"],
   duration: "2-3 hours",
   warranty: "14-day odor-free guarantee"
 }, {
