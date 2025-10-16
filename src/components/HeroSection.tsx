@@ -20,7 +20,7 @@ export const HeroSection = () => {
           <div className="space-y-4">
             <h1 
               className="text-3xl md:text-5xl lg:text-6xl font-bold font-inter text-foreground leading-tight"
-              style={{ textShadow: '0 0 8px rgba(212, 175, 55, 0.3), 0 0 15px rgba(212, 175, 55, 0.2), 2px 2px 4px rgba(0, 0, 0, 0.9), 4px 4px 8px rgba(0, 0, 0, 0.7), 6px 6px 12px rgba(0, 0, 0, 0.5)' }}
+              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9), 4px 4px 8px rgba(0, 0, 0, 0.7), 6px 6px 12px rgba(0, 0, 0, 0.5)' }}
             >
               Precision Car Detailing
               <span className="block text-primary"> with a Balkan Touch</span>
