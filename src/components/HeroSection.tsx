@@ -20,14 +20,14 @@ export const HeroSection = () => {
           <div className="space-y-4">
             <h1 
               className="text-3xl md:text-5xl lg:text-6xl font-bold font-inter text-foreground leading-tight"
-              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.9), 4px 4px 8px rgba(0, 0, 0, 0.7), 6px 6px 12px rgba(0, 0, 0, 0.5)' }}
+              style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)' }}
             >
               Precision Car Detailing
               <span className="block text-primary"> with a Balkan Touch</span>
             </h1>
             <p 
               className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto font-inter"
-              style={{ textShadow: '1px 1px 6px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 0, 0, 0.6)' }}
+              style={{ textShadow: '0 1px 4px rgba(0, 0, 0, 0.3)' }}
             >
               Bringing Old-World Craftsmanship to Modern Vehicle Care
             </p>
