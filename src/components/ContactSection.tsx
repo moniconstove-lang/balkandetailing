@@ -175,8 +175,8 @@ export const ContactSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground">Service Needed</label>
-                  <Textarea 
+                  <label className="text-sm font-medium text-foreground">Additional Information</label>
+                  <Textarea
                     name="serviceNeeded"
                     value={formData.serviceNeeded}
                     onChange={handleInputChange}
