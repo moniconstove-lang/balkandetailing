@@ -34,9 +34,9 @@ export const HeroSection = () => {
           </div>
           
           {/* Social Proof */}
-          <div className="bg-primary/10 backdrop-blur-sm rounded-lg p-3 max-w-sm mx-auto border-2 border-primary/30">
-            <p className="text-sm font-semibold text-primary mb-1">🎉 First-Time Offer: $199 (Save 20%)</p>
-            <p className="text-xs text-foreground">✨ Complete Interior & Exterior Detail</p>
+          <div className="bg-primary/10 backdrop-blur-sm rounded-lg p-4 max-w-md mx-auto border border-primary/20">
+            <p className="text-sm font-semibold text-primary mb-1.5">New Client Special: $199</p>
+            <p className="text-xs text-foreground">Complete Interior & Exterior Detail — Save 20%</p>
           </div>
           
           {/* CTA Buttons */}
