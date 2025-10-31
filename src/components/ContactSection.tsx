@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { useState } from "react";
@@ -15,6 +16,7 @@ export const ContactSection = () => {
     lastName: '',
     email: '',
     phone: '',
+    servicePackage: '',
     vehicleDetails: '',
     serviceNeeded: ''
   });
@@ -52,6 +54,7 @@ export const ContactSection = () => {
           lastName: '',
           email: '',
           phone: '',
+          servicePackage: '',
           vehicleDetails: '',
           serviceNeeded: ''
         });
@@ -139,6 +142,24 @@ export const ContactSection = () => {
                     className="bg-background/50"
                     required
                   />
+                </div>
+                
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-foreground">Service Package</label>
+                  <Select 
+                    value={formData.servicePackage}
+                    onValueChange={(value) => setFormData(prev => ({ ...prev, servicePackage: value }))}
+                    required
+                  >
+                    <SelectTrigger className="bg-background/50">
+                      <SelectValue placeholder="Select a package" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-background border-border z-50">
+                      <SelectItem value="interior">Interior Detail</SelectItem>
+                      <SelectItem value="exterior">Exterior Detail</SelectItem>
+                      <SelectItem value="both">Complete Package (Interior + Exterior)</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
                 
                 <div className="space-y-2">
